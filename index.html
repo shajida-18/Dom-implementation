@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ass 3</title>
+  </head>
+  <body>
+    <header>
+      <h3>Hello!</h3>
+    </header>
+    <section>
+      <div>
+        <div class="box" id="box-1" onclick="red()">red</div>
+        <div class="box" id="box-2" onclick="blue()">blue</div>
+        <div class="box" id="box-3" onclick="green()">green</div>
+        <div class="box" id="box-4" onclick="yellow()">yellow</div>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="enter your name"
+        />
+        <button onclick="greet()">greet</button>
+      </div>
+    </section>
+    <script>
+      function greet() {
+        const username = document.getElementById("username").value;
+        document.querySelector("h3").textContent = `hello ${username}`;
+      }
+      function red() {
+        document.querySelector("#box-1").style.backgroundColor = "red";
+      }
+      function blue() {
+        document.querySelector("#box-2").style.backgroundColor = "blue";
+      }
+      function green() {
+        document.querySelector("#box-3").style.backgroundColor = "green";
+      }
+      function yellow() {
+        document.querySelector("#box-4").style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>
